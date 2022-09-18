@@ -14,3 +14,6 @@
         hist = log --graph --oneline --decorate
         st = status
 
+[user]
+	email = ahmedsayed124680@gmail.com
+	name = Ahmed Sayed
