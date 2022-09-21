@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'store',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +81,9 @@ DATABASES = {
         'USER': 'learndjango100',
         'PASSWORD': 'Ahmed123!',
         'HOST': 'learndjango100.mysql.pythonanywhere-services.com',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        }
     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
