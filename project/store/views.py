@@ -20,23 +20,7 @@ def get_client_services_api(request, client_id):
     contract = get_object_or_404(Contract,client=client_id)
     contractSerial = contract.serialNum
     client = contract.client.name
-
     servs=contract.services.all()
     servss = [str(s.name) for s in servs]
-    # client = [str(x.name) for x in client]
-    # core_serializers.serialize('json', servs, fields=("name","typee"))
     data =  {'contractSerial': contractSerial,'client':client, 'services':servss}
-
     return JsonResponse(data)
-    # data =  ContractSerializer(Contract, many=True).data
-    # return Response(data)
-
-
-
-
-# class get_client_services_api(APIView):
-#     def get(self, request):
-#         clients = Client.objects.all()
-#         data =  {'clients': list(clients.values("pk","name", ""))}
-#         return JsonResponse(data)
-
